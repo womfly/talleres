@@ -152,7 +152,7 @@ nav a:hover {
     color: transparent;
     text-transform: uppercase;
     font-weight: 900;
-    -webkit-text-stroke: 1.5px #3daeae;
+    -webkit-text-stroke: 1.5px #35454cd5;
     animation: scrollText 20s linear infinite;
 }
 
@@ -234,7 +234,7 @@ nav a:hover {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(180deg, rgba(53, 69, 76, 0.24) 0%, rgba(53, 69, 76, 0.55) 100%);
+    background: linear-gradient(180deg, #35454cd5 0%, #35454cd5 100%);
 }
 
 .fondo-animado {
@@ -286,7 +286,7 @@ nav a:hover {
     position: absolute;
     inset: 0;
     z-index: 2;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.22) 60%, transparent 100%);
+    background: linear-gradient(to top, #35454cd5 0%, #35454cd5 60%, transparent 100%);
 }
 
 .visual-box:hover img {
@@ -847,7 +847,7 @@ footer p:last-child {
     }
 
     .marquee-line.reverse {
-        -webkit-text-stroke: 1px #35454c;
+        -webkit-text-stroke: 1px #35454cd5;
     }
 
     .hero-static-content-center p {
