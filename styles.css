@@ -325,6 +325,105 @@ nav a:hover {
     box-shadow: 0 16px 32px rgba(53, 69, 76, 0.08);
 }
 
+.section-descripcion {
+    display: block;
+    padding-top: 72px;
+}
+
+.descripcion-visual {
+    max-width: 720px;
+    margin: 0 auto 4rem;
+}
+
+.descripcion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.2rem;
+    align-items: start;
+}
+
+.descripcion-grid .section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.descripcion-grid .section-content h2 {
+    margin-bottom: 0;
+    padding-left: 0.25rem;
+    font-size: 1.6rem;
+}
+
+.highlight-box-descripcion {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid rgba(172, 142, 105, 0.16);
+    box-shadow: 0 20px 40px rgba(53, 69, 76, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.highlight-box-descripcion::before {
+    content: "";
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    width: 48px;
+    height: 4px;
+    border-radius: 999px;
+    background: currentColor;
+    opacity: 0.16;
+}
+
+.highlight-box-descripcion:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 26px 46px rgba(53, 69, 76, 0.12);
+}
+
+.highlight-box-descripcion h4 {
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 0.35rem;
+    margin-bottom: -0.15rem;
+}
+
+.highlight-box-descripcion ul {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.highlight-box-descripcion ul + h4 {
+    margin-top: 0.6rem;
+}
+
+.highlight-box-descripcion li {
+    padding-top: 0.95rem;
+    padding-bottom: 0.95rem;
+    line-height: 1.55;
+}
+
+.highlight-box-descripcion li:not(:last-child) {
+    border-bottom: 1px solid rgba(53, 69, 76, 0.08);
+}
+
+.highlight-box-descripcion strong {
+    display: inline-block;
+    margin-right: 0.2rem;
+}
+
+.highlight-box-descripcion soft {
+    font-size: 0.92em;
+    white-space: nowrap;
+    opacity: 0.8;
+}
+
 h2 {
     font-size: 2.2rem;
     color: var(--primary-color);
@@ -343,7 +442,8 @@ h2::after {
 
 .section h3,
 .highlight-box h4,
-.highlight-box-duracion h4 {
+.highlight-box-duracion h4,
+.highlight-box-descripcion h4 {
     color: var(--warm-accent);
 }
 
@@ -710,6 +810,7 @@ footer p:last-child {
 
     .highlight-box,
     .highlight-box-duracion,
+    .highlight-box-descripcion,
     .metodologia-card,
     .historia-card {
         padding: 1.5rem;
@@ -728,6 +829,23 @@ footer p:last-child {
 
     .historia-section {
         padding: 72px 1rem;
+    }
+
+    .descripcion-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .descripcion-visual {
+        margin-bottom: 2rem;
+    }
+
+    .descripcion-grid .section-content {
+        gap: 0.8rem;
+    }
+
+    .descripcion-grid .section-content h2 {
+        font-size: 1.45rem;
     }
 
     .historia-header {
