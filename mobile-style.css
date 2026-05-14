@@ -1,0 +1,44 @@
+/* ============ RESPONSIVIDAD (MEDIA QUERIES) ============ */
+
+@media (max-width: 768px) {
+    /* Ajuste del Header */
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav {
+        gap: 10px;
+        font-size: 0.8rem;
+    }
+
+    /* Ajuste del Hero */
+    .hero {
+        height: 50vh; /* Más bajito en móvil */
+    }
+
+    .marquee-line {
+        font-size: 12vw; /* Un poco más grande en móvil para que se aprecie el hueco */
+        -webkit-text-stroke: 1px var(--accent-color); /* Borde un pelín más fino en pantallas pequeñas */
+    }
+
+    /* Ajuste de la Historia (¡IMPORTANTE!) */
+    .historia-grid {
+        flex-direction: column; /* Las tarjetas se ponen una debajo de otra */
+        gap: 1.5rem;
+    }
+
+    .historia-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Ajuste de secciones generales */
+    .section {
+        padding: 60px 1.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
