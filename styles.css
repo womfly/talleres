@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. VARIABLES
+   ========================================================================== */
 :root {
     --primary-color: #2f9ea7;
     --secondary-color: #35454c;
@@ -6,23 +9,15 @@
     --neutral-color: #d4af37;
     --light-bg: #f4efe8;
     --white: #ffffff;
-    --text-dark: #35454c;
+    /* CORREGIDO: Eliminado el '00' del final para que el texto sea visible */
+    --text-dark: #35454c; 
     --text-light: #5f6f75;
     --overlay: rgba(53, 69, 76, 0.56);
 }
 
-body {
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='%232f9ea7'%3E%3Cellipse cx='11' cy='11' rx='6' ry='8' transform='rotate(-28 11 11)'/%3E%3Cellipse cx='21' cy='11' rx='6' ry='8' transform='rotate(28 21 11)'/%3E%3Cellipse cx='11' cy='21' rx='5' ry='6' transform='rotate(24 11 21)'/%3E%3Cellipse cx='21' cy='21' rx='5' ry='6' transform='rotate(-24 21 21)'/%3E%3C/g%3E%3Crect x='15' y='8' width='2' height='16' rx='1' fill='%2335454c'/%3E%3Cpath d='M16 9 C14 5 12 4 10 4' stroke='%2335454c' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M16 9 C18 5 20 4 22 4' stroke='%2335454c' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") 16 16, auto;
-}
-
-a,
-button,
-[role='button'],
-input[type='submit'],
-input[type='button'] {
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='%232f9ea7'%3E%3Cellipse cx='11' cy='11' rx='6' ry='8' transform='rotate(-28 11 11)'/%3E%3Cellipse cx='21' cy='11' rx='6' ry='8' transform='rotate(28 21 11)'/%3E%3Cellipse cx='11' cy='21' rx='5' ry='6' transform='rotate(24 11 21)'/%3E%3Cellipse cx='21' cy='21' rx='5' ry='6' transform='rotate(-24 21 21)'/%3E%3C/g%3E%3Crect x='15' y='8' width='2' height='16' rx='1' fill='%2335454c'/%3E%3Cpath d='M16 9 C14 5 12 4 10 4' stroke='%2335454c' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M16 9 C18 5 20 4 22 4' stroke='%2335454c' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") 16 16, pointer;
-}
-
+/* ==========================================================================
+   2. RESET Y ESTILOS BASE
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -40,6 +35,15 @@ body {
     color: var(--text-dark);
     background-color: var(--light-bg);
     overflow-x: hidden;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='%232f9ea7'%3E%3Cellipse cx='11' cy='11' rx='6' ry='8' transform='rotate(-28 11 11)'/%3E%3Cellipse cx='21' cy='11' rx='6' ry='8' transform='rotate(28 21 11)'/%3E%3Cellipse cx='11' cy='21' rx='5' ry='6' transform='rotate(24 11 21)'/%3E%3Cellipse cx='21' cy='21' rx='5' ry='6' transform='rotate(-24 21 21)'/%3E%3C/g%3E%3Crect x='15' y='8' width='2' height='16' rx='1' fill='%2335454c'/%3E%3Cpath d='M16 9 C14 5 12 4 10 4' stroke='%2335454c' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M16 9 C18 5 20 4 22 4' stroke='%2335454c' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") 16 16, auto;
+}
+
+a,
+button,
+[role='button'],
+input[type='submit'],
+input[type='button'] {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='%232f9ea7'%3E%3Cellipse cx='11' cy='11' rx='6' ry='8' transform='rotate(-28 11 11)'/%3E%3Cellipse cx='21' cy='11' rx='6' ry='8' transform='rotate(28 21 11)'/%3E%3Cellipse cx='11' cy='21' rx='5' ry='6' transform='rotate(24 11 21)'/%3E%3Cellipse cx='21' cy='21' rx='5' ry='6' transform='rotate(-24 21 21)'/%3E%3C/g%3E%3Crect x='15' y='8' width='2' height='16' rx='1' fill='%2335454c'/%3E%3Cpath d='M16 9 C14 5 12 4 10 4' stroke='%2335454c' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M16 9 C18 5 20 4 22 4' stroke='%2335454c' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") 16 16, pointer;
 }
 
 img,
@@ -48,6 +52,9 @@ video {
     max-width: 100%;
 }
 
+/* ==========================================================================
+   3. HEADER Y NAVEGACIÓN
+   ========================================================================== */
 header {
     position: sticky;
     top: 0;
@@ -122,6 +129,9 @@ nav a:hover {
     color: var(--primary-color);
 }
 
+/* ==========================================================================
+   4. HERO (VÍDEO PRINCIPAL Y ANIMACIONES)
+   ========================================================================== */
 .hero {
     position: relative;
     height: min(80vh, 900px);
@@ -150,9 +160,10 @@ nav a:hover {
     font-size: 25vh;
     line-height: 1;
     color: transparent;
+    -webkit-text-fill-color: transparent;
     text-transform: uppercase;
     font-weight: 900;
-    -webkit-text-stroke: 1.5px #35454cd5;
+    -webkit-text-stroke: 1.5px #35454c;
     animation: scrollText 20s linear infinite;
 }
 
@@ -201,7 +212,6 @@ nav a:hover {
     from {
         transform: translateX(80%);
     }
-
     to {
         transform: translateX(-80%);
     }
@@ -231,10 +241,7 @@ nav a:hover {
 }
 
 .hero-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(180deg, #35454cd5 0%, #35454cd5 100%);
+    display: none; 
 }
 
 .fondo-animado {
@@ -245,6 +252,9 @@ nav a:hover {
     display: inline-flex;
 }
 
+/* ==========================================================================
+   5. SECCIONES Y ESTRUCTURA GENERAL
+   ========================================================================== */
 .section {
     max-width: 1100px;
     margin: 40px auto;
@@ -282,11 +292,7 @@ nav a:hover {
 }
 
 .visual-box::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    background: linear-gradient(to top, #35454cd5 0%, #35454cd5 60%, transparent 100%);
+    display: none;
 }
 
 .visual-box:hover img {
@@ -317,6 +323,9 @@ nav a:hover {
     color: var(--white);
 }
 
+/* ==========================================================================
+   6. CAJAS Y TARJETAS (HIGHLIGHTS)
+   ========================================================================== */
 .highlight-box,
 .highlight-box-duracion {
     background: var(--white);
@@ -324,6 +333,14 @@ nav a:hover {
     border-radius: 20px;
     border: 1px solid rgba(172, 142, 105, 0.16);
     box-shadow: 0 16px 32px rgba(53, 69, 76, 0.08);
+}
+
+/* Estilo para que el texto sea gris en las cajas blancas */
+.highlight-box p, 
+.highlight-box li, 
+.highlight-box-duracion p,
+.highlight-box-descripcion li {
+    color: var(--text-light);
 }
 
 .documental-card {
@@ -390,6 +407,9 @@ nav a:hover {
     border-bottom: 1px solid rgba(53, 69, 76, 0.08);
 }
 
+/* ==========================================================================
+   7. TIPOGRAFÍA Y LISTAS
+   ========================================================================== */
 h2 {
     font-size: 2.2rem;
     color: var(--primary-color);
@@ -446,6 +466,9 @@ ul li:hover::before {
     transform: rotate(-15deg) scale(1.2);
 }
 
+/* ==========================================================================
+   8. METODOLOGÍA
+   ========================================================================== */
 .metodologia-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -462,6 +485,10 @@ ul li:hover::before {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.metodologia-card p {
+    color: var(--text-light);
+}
+
 .metodologia-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 16px 32px rgba(53, 69, 76, 0.12);
@@ -473,6 +500,9 @@ ul li:hover::before {
     font-size: 1.1rem;
 }
 
+/* ==========================================================================
+   9. HISTORIA
+   ========================================================================== */
 .historia-section {
     padding: 100px 2rem;
     background: linear-gradient(180deg, rgba(192, 179, 160, 0.16) 0%, var(--light-bg) 45%, var(--white) 100%);
@@ -517,6 +547,10 @@ ul li:hover::before {
     transition: transform 0.4s ease, border-color 0.4s ease;
 }
 
+.historia-card p {
+    color: var(--text-light);
+}
+
 .historia-card:hover {
     border-bottom-color: var(--warm-accent);
     transform: translateY(-10px);
@@ -549,6 +583,9 @@ ul li:hover::before {
     color: var(--neutral-color);
 }
 
+/* ==========================================================================
+   10. FOOTER Y ANIMACIONES SCROLL
+   ========================================================================== */
 footer {
     margin-top: 0;
     padding: 4rem 2rem;
@@ -563,11 +600,12 @@ footer p {
     font-size: 0.95rem;
     opacity: 0.9;
     letter-spacing: 0.5px;
+    color: var(--white) !important; /* Forzar blanco en fondo oscuro */
 }
 
 footer p:first-child {
     font-weight: 700;
-    color: var(--neutral-color);
+    color: var(--neutral-color) !important;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -583,7 +621,6 @@ footer p:last-child {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -600,6 +637,10 @@ footer p:last-child {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ==========================================================================
+   11. MEDIA QUERIES (RESPONSIVE)
+   ========================================================================== */
 
 @media (max-width: 1180px) {
     .header-content,
@@ -847,7 +888,7 @@ footer p:last-child {
     }
 
     .marquee-line.reverse {
-        -webkit-text-stroke: 1px #35454cd5;
+        -webkit-text-stroke: 1px #35454c;
     }
 
     .hero-static-content-center p {
