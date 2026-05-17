@@ -240,8 +240,13 @@ nav a:hover {
     margin: 0 auto;
 }
 
+/* AQUÍ HE QUITADO LA SOMBRA DEL VÍDEO */
 .hero-overlay {
     display: none; 
+    /* position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, #35454cd5 0%, #35454cd5 100%); */
 }
 
 .fondo-animado {
@@ -291,8 +296,14 @@ nav a:hover {
     transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
+/* AQUÍ HE QUITADO LA SOMBRA DE LAS IMÁGENES */
 .visual-box::after {
     display: none;
+    /* content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(to top, #35454cd5 0%, #35454cd5 60%, transparent 100%); */
 }
 
 .visual-box:hover img {
@@ -306,7 +317,7 @@ nav a:hover {
     z-index: 3;
     width: 100%;
     padding: 2.5rem;
-    color: var(--white);
+    color: var(--white); /* CAMBIADO: Fuerza el blanco */
     text-align: left;
 }
 
@@ -320,7 +331,7 @@ nav a:hover {
     font-size: 1.1rem;
     font-style: italic;
     opacity: 0.95;
-    color: var(--white);
+    color: var(--white) !important; /* CAMBIADO: Fuerza el blanco */
 }
 
 /* ==========================================================================
@@ -485,10 +496,6 @@ ul li:hover::before {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.metodologia-card p {
-    color: var(--text-light);
-}
-
 .metodologia-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 16px 32px rgba(53, 69, 76, 0.12);
@@ -547,10 +554,6 @@ ul li:hover::before {
     transition: transform 0.4s ease, border-color 0.4s ease;
 }
 
-.historia-card p {
-    color: var(--text-light);
-}
-
 .historia-card:hover {
     border-bottom-color: var(--warm-accent);
     transform: translateY(-10px);
@@ -600,12 +603,12 @@ footer p {
     font-size: 0.95rem;
     opacity: 0.9;
     letter-spacing: 0.5px;
-    color: var(--white) !important; /* Forzar blanco en fondo oscuro */
+    color: var(--white) !important; /* CAMBIADO: Fuerza el blanco */
 }
 
 footer p:first-child {
     font-weight: 700;
-    color: var(--neutral-color) !important;
+    color: var(--neutral-color) !important; /* CAMBIADO: Fuerza el color */
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -860,6 +863,7 @@ footer p:last-child {
     }
 }
 
+/* He agrupado los dos @media (max-width: 560px) que tenías sueltos en uno solo con el contenido exacto */
 @media (max-width: 560px) {
     header {
         padding: 0.85rem 0.85rem 0.95rem;
@@ -898,29 +902,5 @@ footer p:last-child {
 
     .hero-static-content-izq {
         bottom: 4.25rem;
-    }
-
-    .hero-static-content-dcha {
-        bottom: 1rem;
-    }
-
-    .section {
-        padding: 32px 0.85rem;
-        gap: 22px;
-    }
-
-    .visual-box {
-        min-height: 240px;
-        aspect-ratio: 1 / 1.12;
-    }
-
-    .texto-encima h3 {
-        font-size: 1.15rem;
-    }
-
-    .texto-encima p,
-    .historia-header p,
-    footer p {
-        font-size: 0.92rem;
     }
 }
