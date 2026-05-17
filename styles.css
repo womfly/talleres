@@ -891,10 +891,6 @@ footer p:last-child {
         padding: 76px 0.85rem 56px;
     }
 
-    .marquee-line.reverse {
-        -webkit-text-stroke: 1px #35454c;
-    }
-
     .hero-static-content-center p {
         top: 52%;
         font-size: min(20vw, 4.6rem);
